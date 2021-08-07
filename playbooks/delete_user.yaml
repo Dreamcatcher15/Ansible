@@ -1,0 +1,11 @@
+---
+- name: Deleting a user using ansible
+  hosts: all
+  become: yes
+  tasks: 
+    - name: removing a user to a system
+      user:
+        name: john
+        force: yes 
+        state: absent
+        remove: yes
